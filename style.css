@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #2f2855;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator {
+    background: #1c0f70;
+    padding: 20px;
+    border-radius: 10px;
+    animation: calcShadowOrbit 3s linear infinite;
+}
+
+@keyframes calcShadowOrbit {
+    0% {
+        box-shadow:
+            -8px -8px 15px rgba(3, 243, 123, 0.9),   
+             8px  8px 15px rgba(3, 7, 250, 0.9);  
+    }
+    25% {
+        box-shadow:
+             8px -8px 15px rgba(231, 27, 146, 0.9),   
+            -8px  8px 15px rgba(224, 240, 4, 0.9);   
+    }
+    50% {
+        box-shadow:
+             8px  8px 15px rgba(3, 19, 243, 0.9),   
+            -8px -8px 15px rgba(247, 141, 3, 0.9);   
+    }
+    75% {
+        box-shadow:
+            -8px  8px 15px rgba(235, 3, 243, 0.9),   
+             8px -8px 15px rgba(238, 10, 10, 0.9);   
+    }
+    100% {
+        box-shadow:
+            -8px -8px 15px rgba(235, 3, 243, 0.9),
+             8px  8px 15px rgba(238, 10, 10, 0.9);
+    }
+}
+
+.calculator form input[value="="] {
+    width: 135px;
+    background: #49038ace;
+    color: #fff;
+}
+
+.calculator form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 65px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+} 
+
+form .display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+
+}
+form .display input{
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+    padding:10px;
+    background: #fff;
+    color:#252006;
+    box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0),
+                inset 4px 4px 10px rgb(0, 0, 0);
+    
+}
+form input .equal{
+    color: #09f399;
+    width: 145px;
+    
+}
+form input.operator{
+    color: #09f399;
+}
+.bounce-container {
+    background: #5b02ff;
+  width: 100%;
+  overflow:hidden;
+  position: relative;
+  height: 60px;
+}
+
+.bouncing-text {
+  display: inline-block;
+  font-size: 30px;
+  color: #08f02f;
+  white-space: nowrap;
+  animation: bounceSide 3s ease-in-out infinite alternate;
+}
+
+@keyframes bounceSide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(80vw);
+  }
+}
+
